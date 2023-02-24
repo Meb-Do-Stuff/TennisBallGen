@@ -1,0 +1,18 @@
+{
+  "name": "tennis_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chart.js": "^3.9.1",
+    "chartjs-node-canvas": "^4.1.6",
+    "plotly": "^1.0.6",
+    "plotly.js-dist": "^2.18.2"
+  }
+}
