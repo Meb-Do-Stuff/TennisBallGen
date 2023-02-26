@@ -1,9 +1,12 @@
 module Bounces
-    implicit none
-    public :: rebonds
+
+    private
+    public :: rebonds, graph
 
 contains
+
     function rebonds(h) result(htab)
+        implicit none
 
         real(kind=8),pointer,intent(in) :: h
         real(kind=8),allocatable :: htab(:)
@@ -23,7 +26,14 @@ contains
            htab(i) = dl
            dl = dl * 0.75
         end do
-    end function
+    end function rebonds
+
+    subroutine graph(htab)
+        real(kind=8), allocatable :: htab(:)
+
+        print *, "graph"
+    end subroutine graph
+
 end module
 
 program main
@@ -34,6 +44,6 @@ program main
     real(kind=8), target :: b = 2
 
     htab = rebonds(b)
-
+    call graph(htab)
     print *, htab
 end program
